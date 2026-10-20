@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Ohaka David - Information Technology Student Portfolio">
+    <meta name="author" content="Ohaka David">
+
+    <title>Ohaka David | IT Student Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #050817;
+            color: white;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            width: 100%;
+            height: 75px;
+            background: rgba(5, 8, 23, 0.95);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 7%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(167, 139, 250, 0.2);
+        }
+
+        .logo {
+            color: #a78bfa;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #a78bfa;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            min-height: 100vh;
+            padding: 100px 7% 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+            background:
+                radial-gradient(circle at 80% 40%, rgba(124, 58, 237, 0.18), transparent 30%),
+                #050817;
+        }
+
+        .hero-content {
+            width: 60%;
+        }
+
+        .welcome {
+            color: #a78bfa;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(50px, 8vw, 90px);
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #a78bfa;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            color: #d1d5db;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #aeb4c3;
+            max-width: 600px;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 13px 25px;
+            border-radius: 7px;
+            font-weight: bold;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .primary-btn {
+            background: #7c3aed;
+            color: white;
+        }
+
+        .primary-btn:hover {
+            background: #a78bfa;
+            transform: translateY(-3px);
+        }
+
+        .secondary-btn {
+            border: 1px solid #a78bfa;
+            color: #a78bfa;
+        }
+
+        .secondary-btn:hover {
+            background: #a78bfa;
+            color: #050817;
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            color: #d1d5db;
+        }
+
+        .social-links a {
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #a78bfa;
+        }
+
+        .social-links img {
+            width: 25px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .hero-image {
+            width: 350px;
+            height: 430px;
+            border-radius: 25px;
+            background-image: url("images/IMG-20260928-WA0034.jpg");
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 0 60px rgba(124, 58, 237, 0.25);
+            border: 2px solid rgba(167, 139, 250, 0.3);
+        }
+
+        /* ================= GENERAL ================= */
+
+        section {
+            padding: 100px 7%;
+        }
+
+        .section-title {
+            font-size: 45px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .section-title span {
+            color: #a78bfa;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about {
+            background: #0a192f;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .about-card h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #a78bfa;
+        }
+
+        .about-card p {
+            color: #cbd5e1;
+            font-size: 17px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .service {
+            background: #071426;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(167, 139, 250, 0.15);
+            transition: 0.3s;
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+            border-color: #a78bfa;
+        }
+
+        .service h4 {
+            margin-bottom: 8px;
+            color: white;
+        }
+
+        .service p {
+            font-size: 14px;
+        }
+
+        /* ================= PROJECTS ================= */
+
+        .projects {
+            background: #111827;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #020617;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid rgba(167, 139, 250, 0.15);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: #a78bfa;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .project-content p {
+            color: #9ca3af;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .technologies {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tech {
+            background: #1e293b;
+            color: #c4b5fd;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        /* ================= SKILLS ================= */
+
+        .skills {
+            background: #1e1208;
+        }
+
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .skill-card {
+            background: #0f0f0f;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 15px;
+            border: 1px solid rgba(167, 139, 250, 0.15);
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-7px);
+            border-color: #a78bfa;
+        }
+
+        .skill-card img {
+            width: 65px;
+            height: 65px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        .skill-card h3 {
+            font-size: 17px;
+        }
+
+        /* ================= EXPERIENCE ================= */
+
+        .experience {
+            background: #1c172c;
+        }
+
+        .experience-container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .experience-box {
+            background: #111827;
+            padding: 35px;
+            border-left: 4px solid #a78bfa;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .experience-box h3 {
+            color: #a78bfa;
+            margin-bottom: 15px;
+        }
+
+        .experience-box p {
+            color: #cbd5e1;
+        }
+
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .interest {
+            padding: 10px 15px;
+            background: #312e81;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact {
+            background: #0b1020;
+            text-align: center;
+        }
+
+        .contact-intro {
+            color: #aeb4c3;
+            max-width: 600px;
+            margin: -25px auto 40px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .contact-card {
+            background: #111827;
+            padding: 25px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            background: #172033;
+        }
+
+        .contact-card img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .contact-card h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .contact-card p {
+            color: #aeb4c3;
+            font-size: 14px;
+            word-break: break-word;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #050817;
+            text-align: center;
+            padding: 25px;
+            color: #8b92a3;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        footer span {
+            color: #a78bfa;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 1000px) {
+
+            .project-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .skill-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-image {
+                width: 300px;
+                height: 380px;
+            }
+        }
+
+        @media (max-width: 750px) {
+
+            nav {
+                padding: 0 5%;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 120px;
+            }
+
+            .hero-content {
+                width: 100%;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .social-links {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .hero-image {
+                width: 260px;
+                height: 320px;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skill-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 35px;
+            }
+        }
+
+        @media (max-width: 450px) {
+
+            section {
+                padding: 70px 5%;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero h2 {
+                font-size: 19px;
+            }
+
+            .skill-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .skill-card {
+                padding: 20px 10px;
+            }
+
+            .skill-card img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+        <div class="logo">Ohaka David</div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="welcome">
+                Welcome to my portfolio
+            </div>
+
+            <h1>
+                Ohaka <span>David</span>
+            </h1>
+
+            <h2>
+                Information Technology Student
+            </h2>
+
+            <p>
+                Building skills, creating solutions, and growing through
+                technology. I am passionate about web development,
+                programming, graphic design, and solving real-world problems.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="btn primary-btn">
+                    View My Projects →
+                </a>
+
+                <a href="#contact" class="btn secondary-btn">
+                    Contact Me ✉
+                </a>
+
+            </div>
+
+            <div class="social-links">
+
+                <a href="mailto:davidohaka2009@gmail.com">
+                    <img src="images/email-13728.png" alt="Email">
+                    Email
+                </a>
+
+                <a href="https://wa.me/2347039561254" target="_blank">
+                    <img src="images/logo-whatsapp-png-46041.png" alt="WhatsApp">
+                    WhatsApp
+                </a>
+
+                <a href="#" target="_blank">
+                    <img src="images/github.png" alt="GitHub">
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image"></div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <div class="about-container">
+
+            <div class="about-card">
+
+                <h3>Who I Am</h3>
+
+                <p>
+                    I am an Information Technology student passionate about
+                    web development, programming, graphic design, and
+                    learning how technology can solve real-world problems.
+                </p>
+
+                <br>
+
+                <p>
+                    I enjoy learning new technologies, building projects,
+                    improving my technical skills, and turning ideas into
+                    useful digital solutions.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <h3>What I Do</h3>
+
+                <div class="services">
+
+                    <div class="service">
+                        <h4>💻 Web Development</h4>
+                        <p>
+                            Building responsive and user-friendly websites
+                            and web applications.
+                        </p>
+                    </div>
+
+                    <div class="service">
+                        <h4>🐍 Programming</h4>
+                        <p>
+                            Writing clean and efficient code to solve
+                            problems.
+                        </p>
+                    </div>
+
+                    <div class="service">
+                        <h4>🎨 Graphic Design</h4>
+                        <p>
+                            Designing creative and professional graphics
+                            that communicate ideas.
+                        </p>
+                    </div>
+
+                    <div class="service">
+                        <h4>🔍 Research</h4>
+                        <p>
+                            Analyzing problems and finding smart,
+                            effective solutions.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section class="projects" id="projects">
+
+        <h2 class="section-title">
+            Feature <span>Projects</span>
+        </h2>
+
+        <div class="project-grid">
+
+            <!-- Project 1 -->
+
+            <div class="project-card">
+
+                <div
+                    class="project-image"
+                    style="background-image: url('images/Screenshot 2026-10-02 121849.png');">
+                </div>
+
+                <div class="project-content">
+
+                    <h3>Personal Portfolio Website</h3>
+
+                    <p>
+                        A modern responsive portfolio website created to
+                        showcase my profile, skills, projects, and contact
+                        information.
+                    </p>
+
+                    <div class="technologies">
+                        <span class="tech">HTML</span>
+                        <span class="tech">CSS</span>
+                        <span class="tech">JavaScript</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Project 2 -->
+            <a href="book.html">
+            <div class="project-card">
+                
+                <div
+                    class="project-image"
+                    style="background-image: url('images/Screenshot 2026-10-02 120654.png');">
+                </div>
+
+                <div class="project-content">
+
+                    <h3>Hospital Website</h3>
+
+                    <p>
+                        A healthcare website concept designed to provide
+                        users with information about hospital services
+                        and departments.
+                    </p>
+
+                    <div class="technologies">
+                        <span class="tech">HTML</span>
+                        <span class="tech">CSS</span>
+                        <span class="tech">JavaScript</span>
+                    </div>
+
+                </div>
+
+            </div>
+            </a>
+
+
+            <!-- Project 3 -->
+             <a href="device.html">
+            <div class="project-card">
+
+                <div
+                    class="project-image"
+                    style="background-image: url('images/Screenshot 2026-10-02 120443.png');">
+                </div>
+
+                <div class="project-content">
+
+                    <h3>Restaurant Website</h3>
+
+                    <p>
+                        A restaurant website concept designed to showcase
+                        food, services, menu items, and business information.
+                    </p>
+
+                    <div class="technologies">
+                        <span class="tech">HTML</span>
+                        <span class="tech">CSS</span>
+                        <span class="tech">JavaScript</span>
+                    </div>
+
+                </div>
+
+            </div>
+            </a>
+
+            <!-- Project 4 -->
+            <a href="you.html">
+            <div class="project-card">
+
+                <div
+                    class="project-image"
+                    style="background-image: url('images/Screenshot 2026-10-02 120522.png');">
+                </div>
+
+                <div class="project-content">
+
+                    <h3>Mall Website</h3>
+
+                    <p>
+                        A modern website concept for displaying shops,
+                        products, services, and information about a shopping
+                        mall.
+                    </p>
+
+                    <div class="technologies">
+                        <span class="tech">HTML</span>
+                        <span class="tech">CSS</span>
+                        <span class="tech">JavaScript</span>
+                    </div>
+
+                </div>
+
+            </div>
+            </a>
+
+            <!-- Project 5 -->
+            
+            <div class="project-card">
+                <a href="hotel.html">
+                <div
+                    class="project-image"
+                    style="background-image: url('images/Screenshot 2026-10-02 142335.png');">
+                </div>
+                </a>    
+                <div class="project-content">
+
+                    <h3>Hotel Website</h3>
+
+                    <p>
+                        A hotel website concept designed to showcase rooms,
+                        services, facilities, and hotel information.
+                    </p>
+
+                    <div class="technologies">
+                        <span class="tech">HTML</span>
+                        <span class="tech">CSS</span>
+                        <span class="tech">JavaScript</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <a href="">
+            <!-- Project 6 -->
+
+            <div class="project-card">
+
+                <div
+                    class="project-image"
+                    style="background-image: url('images/Screenshot 2026-10-02 121849.png');">
+                </div>
+
+                <div class="project-content">
+
+                    <h3>Web Application</h3>
+
+                    <p>
+                        A practice web application created to improve my
+                        frontend development and programming skills.
+                    </p>
+
+                    <div class="technologies">
+                        <span class="tech">HTML</span>
+                        <span class="tech">CSS</span>
+                        <span class="tech">JavaScript</span>
+                    </div>
+
+                </div>
+
+            </div>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section class="skills" id="skills">
+
+        <h2 class="section-title">
+            My <span>Skills</span>
+        </h2>
+
+        <div class="skill-grid">
+
+            <div class="skill-card">
+                <img src="images/html-logo.png"
+                     alt="HTML">
+                <h3>HTML</h3>
+            </div>
+
+            <div class="skill-card">
+                <img src="images/css-icon.png"
+                     alt="CSS">
+                <h3>CSS</h3>
+            </div>
+
+            <div class="skill-card">
+                <img src="images/javascript-programming-language-icon.png"
+                     alt="JavaScript">
+                <h3>JavaScript</h3>
+            </div>
+
+            <div class="skill-card">
+                <img src="images/python-programming-language-icon.png"
+                     alt="Python">
+                <h3>Python</h3>
+            </div>
+
+            <div class="skill-card">
+                <img src="images/java-programming-language-icon.png"
+                     alt="Java">
+                <h3>Java</h3>
+            </div>
+
+            <div class="skill-card">
+                <img src="images/nodejs.png"
+                     alt="Node.js">
+                <h3>Node.js</h3>
+            </div>
+
+            <div class="skill-card">
+                <img src="images/typescript.png"
+                     alt="TypeScript">
+                <h3>TypeScript</h3>
+            </div>
+
+            <div class="skill-card">
+                <img src="images/nextjs-icon.png"
+                     alt="Next.js">
+                <h3>Next.js</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EXPERIENCE ================= -->
+
+    <section class="experience" id="experience">
+
+        <h2 class="section-title">
+            Experience & <span>Interests</span>
+        </h2>
+
+        <div class="experience-container">
+
+            <div class="experience-box">
+
+                <h3>Professional Experience</h3>
+
+                <p>
+                    I am an Information Technology student gaining practical
+                    experience in web development, programming, graphic
+                    design, and problem-solving through personal and
+                    academic projects.
+                </p>
+
+            </div>
+
+
+            <div class="experience-box">
+
+                <h3>My Interests</h3>
+
+                <p>
+                    Outside IT, I enjoy exploring technology and spending
+                    time on activities that help me relax and stay creative.
+                </p>
+
+                <div class="interests">
+
+                    <span class="interest">🎵 Music</span>
+                    <span class="interest">🎬 Movies</span>
+                    <span class="interest">🎮 Gaming</span>
+                    <span class="interest">🌍 Exploring</span>
+                    <span class="interest">👨‍👩‍👦 Family</span>
+                    <span class="interest">💡 Technology</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+        <h2 class="section-title">
+            Contact <span>Me</span>
+        </h2>
+
+        <p class="contact-intro">
+            Have a project, question, or just want to say hello?
+            Feel free to get in touch.
+        </p>
+
+
+        <div class="contact-grid">
+
+            <a
+                href="mailto:davidohaka2009@gmail.com"
+                class="contact-card">
+
+                <img src="images/email-13728.png" alt="Email">
+
+                <h3>Email</h3>
+
+                <p>
+                    davidohaka2009@gmail.com
+                </p>
+
+            </a>
+
+
+            <a
+                href="tel:+2349134779878"
+                class="contact-card">
+
+                <img src="images/phone-icon-951.png" alt="Phone">
+
+                <h3>Phone</h3>
+
+                <p>
+                    +234 913 477 9878
+                </p>
+
+            </a>
+
+
+            <a
+                href="https://wa.me/2347039561254"
+                target="_blank"
+                class="contact-card">
+
+                <img
+                    src="images/logo-whatsapp-png-46041.png"
+                    alt="WhatsApp">
+
+                <h3>WhatsApp</h3>
+
+                <p>
+                    +234 703 956 1254
+                </p>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            © 2026 <span>Ohaka David</span>.
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Information Technology Student
+        </p>
+
+    </footer>
+
+</body>
+</html>
+
